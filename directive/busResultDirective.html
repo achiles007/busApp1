@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+	<div class="pand-heading">
+		<h2 class="panel-title">
+			Bus Number: {{w.no}}
+		</h2>
+	</div>
+	<div class="panel-body">
+		This route is operated by {{w.operator}}<br>
+		{{convertToMinuteNext(w.next.duration_ms)}}<br>
+		{{busLoad(w.next.load)}}<br>
+		{{busFeature(w.next.feature)}}<br>
+		{{busType(w.next.type)}}<br>
+
+		<br>
+		{{convertToMinuteNext2(w.next2.duration_ms)}}<br>
+		{{convertToMinuteNext(w.next2.duration_ms)}}<br>
+		{{busLoad(w.next2.load)}}<br>
+		{{busFeature(w.next2.feature)}}<br>
+		{{busType(w.next2.type)}}<br>
+	</div>
+</div>
