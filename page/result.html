@@ -1,0 +1,34 @@
+<h1>Bus Schedule for {{stopNumber}}</h1>
+<a href="#!/"><p>Back to Search</p></a>
+<div ng-repeat="w in busResult.services">
+	<div class="row">
+		<div class="col-md-12">
+			<!-- <bus-result-directive bus-number="w" minute-next="convertToMinuteNext()" minute-next2="convertToMinuteNext2()"></bus-result-directive> -->
+
+			<div class="panel panel-default">
+				<div class="pand-heading">
+					<h2 class="panel-title">
+						Bus Number: {{w.no}}
+					</h2>
+				</div>
+				<div class="panel-body">
+					This route is operated by {{w.operator}}<br>
+					{{convertToMinuteNext(w.next.duration_ms)}}<br>
+					{{busLoad(w.next.load)}}<br>
+					{{busFeature(w.next.feature)}}<br>
+					{{busType(w.next.type)}}<br>
+
+					<br>
+					{{convertToMinuteNext2(w.next2.duration_ms)}}<br>
+					{{busLoad(w.next2.load)}}<br>
+					{{busFeature(w.next2.feature)}}<br>
+					{{busType(w.next2.type)}}<br>
+				</div>
+			</div>
+
+
+
+		</div>
+	</div>
+	
+</div>
